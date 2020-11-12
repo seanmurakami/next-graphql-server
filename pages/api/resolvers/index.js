@@ -18,7 +18,7 @@ export const resolvers = {
     },
     getUser: async (_, args) => {
       try {
-        const user = await axios.get(`https://api/github.com/users/${args.name}`);
+        const user = await axios.get(`https://api.github.com/users/${args.name}`);
         return {
           id: user.data.id,
           login: user.data.login,
